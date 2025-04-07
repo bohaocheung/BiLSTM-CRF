@@ -32,9 +32,9 @@ def main(is_training):
     # evaluating
     precision_scores, recall_scores, f1_scores = get_precision_recall_f1(predicts, test_data, tag_to_ix)
     # for show
-    print("precision   recall   f1_score")
+    print("precision   recall   f1_score   tag")
     for tag in tag_to_ix:
-        print(f"{precision_scores[tag]}   {recall_scores[tag]}   {f1_scores[tag]}  {tag}")
+        print(f"{precision_scores[tag]}        {recall_scores[tag]}     {f1_scores[tag]}       {tag}")
 
 if __name__ == "__main__":
     main(config["is_training"])
